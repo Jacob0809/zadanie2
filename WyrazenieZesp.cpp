@@ -1,4 +1,6 @@
 #include "WyrazenieZesp.hh"
+#include <iostream>
+using namespace std;
 
 LZespolona Oblicz (WyrazenieZesp WyrZ)
 {
@@ -17,26 +19,31 @@ LZespolona Oblicz (WyrazenieZesp WyrZ)
     return wyn;
 }
 
-Operator Wczytaj2 (char operatort)
+string znak(Operator operatort)
 {
-  Operator oper;
   switch (operatort){
-  case '+':
-    oper = Op_Dodaj;
+  case Op_Dodaj:
+    cout << "+";
     break;
 
-  case '-':
-    oper = Op_Odejmij;
+  case Op_Odejmij:
+    cout << "-";
     break;
 
-  case '*':
-    oper = Op_Mnoz;
+  case Op_Mnoz:
+    cout << "*";
     break;
 
-  case '/':
-    oper = Op_Dziel;
+  case Op_Dziel:
+    cout << "/";
   }
-  return oper;
 }
+
+ostream& operator << (ostream& StrWyj, WyrazenieZesp WyrZ)
+{
+  StrWyj << WyrZ.Arg1 << noshowpos << znak << noshowpos << WyrZ.Arg2 << noshowpos;
+  return StrWyj;
+}
+
 
 //void Wyswietl
