@@ -39,6 +39,7 @@ int main(int argc, char **argv)
   }
 
   
+  
   cout << endl;
   cout << " Koniec testu" << endl;
   cout << endl;

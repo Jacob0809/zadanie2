@@ -21,7 +21,8 @@ struct WyrazenieZesp {
   Operator     Op;     // Opertor wyrazenia arytmetycznego
   LZespolona   Arg2;   // Drugi argument wyrazenia arytmetycznego
 };
-
+  
+  
 
 /*
  * Funkcje ponizej nalezy zdefiniowac w module.

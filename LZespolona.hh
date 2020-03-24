@@ -29,6 +29,7 @@ LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2);
 void wyswietl(LZespolona arg);
 LZespolona wczytaj();
 
+
 double modul(LZespolona arg);
 
 
