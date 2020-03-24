@@ -11,10 +11,13 @@ LZespolona Oblicz (WyrazenieZesp WyrZ)
         break;
     case Op_Odejmij:
         return operator - (WyrZ.Arg1, WyrZ.Arg2);
+        break;
     case Op_Mnoz:
         return operator * (WyrZ.Arg1, WyrZ.Arg2);
+        break;
     case Op_Dziel:
-        return operator / (WyrZ.Arg1, WyrZ.Arg2);                     
+        return operator / (WyrZ.Arg1, WyrZ.Arg2); 
+        break;                    
     }
     return wyn;
 }
@@ -36,6 +39,10 @@ string znak(Operator operatort)
 
   case Op_Dziel:
     cout << "/";
+    break;
+  case Op_modulo:
+    cout << "%";
+    break;
   }
 }
 
