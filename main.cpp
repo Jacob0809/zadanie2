@@ -35,10 +35,11 @@ int main(int argc, char **argv)
   
   while (PobierzNastpnePytanie(&BazaT,&WyrZ_PytanieTestowe)) {
     cout << " Czesc rzeczywista pierwszego argumentu: ";
-    cout << WyrZ_PytanieTestowe << endl;
+    cout << WyrZ_PytanieTestowe.Arg1.re << endl;
   }
 
   
+
   cout << endl;
   cout << " Koniec testu" << endl;
   cout << endl;

@@ -19,6 +19,7 @@ bool wczytaj(LZespolona &arg)
   double re;
   double im;
 
+
   cin>>re;
   cin>>im;
   cin>>tmp;

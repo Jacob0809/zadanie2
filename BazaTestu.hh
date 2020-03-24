@@ -18,6 +18,7 @@ struct BazaTestu {
 };
 
 
+
 /*
  * Inicjalizuje test powiazany z dana nazwa.
  */
