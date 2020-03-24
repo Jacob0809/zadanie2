@@ -112,9 +112,9 @@ LZespolona operator % (LZespolona Skl1, LZespolona Skl2)
   wartosc1 = are1 % are2;
   wartosc2 = aim2 % aim2;
   
-  wynik.re= wartosc1;
-  wynik.im= wartosc2;
-  
+  wynik.re= static_cast<double>wartosc1;
+  wynik.im= static_cast<double> wartosc2;
+
   return wynik;
 }
 
