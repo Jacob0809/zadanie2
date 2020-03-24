@@ -1,7 +1,7 @@
 #include "WyrazenieZesp.hh"
 #include <iostream>
 using namespace std;
-
+/*
 LZespolona Oblicz (WyrazenieZesp WyrZ)
 {
     LZespolona wyn;
@@ -41,9 +41,9 @@ string znak(Operator operatort)
 
 ostream& operator << (ostream& StrWyj, WyrazenieZesp WyrZ)
 {
-  StrWyj << WyrZ.Arg1 << noshowpos << znak << noshowpos << WyrZ.Arg2 << noshowpos;
+  StrWyj << WyrZ.Arg1 << noshowpos << znak(WyrZ.Op) << noshowpos << WyrZ.Arg2 << noshowpos;
   return StrWyj;
 }
 
-
+*/
 //void Wyswietl

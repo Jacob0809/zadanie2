@@ -22,15 +22,17 @@ struct WyrazenieZesp {
   LZespolona   Arg2;   // Drugi argument wyrazenia arytmetycznego
 };
   
-  
+
 
 /*
  * Funkcje ponizej nalezy zdefiniowac w module.
- *
  */
+ 
 
-
+/*
 void Wyswietl(WyrazenieZesp  WyrZ);
 LZespolona Oblicz(WyrazenieZesp  WyrZ);
+string Znak(Operator operatort)
+*/
 
 #endif
