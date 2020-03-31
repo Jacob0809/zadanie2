@@ -1,6 +1,8 @@
 #ifndef WYRAZENIEZESP_HH
 #define WYRAZENIEZESP_HH
-
+#include <iostream>
+#include <cmath>
+#include <unistd.h>
 
 
 #include "LZespolona.hh"
@@ -29,8 +31,8 @@ struct WyrazenieZesp {
  */
  
 
-ostream& operator << (ostream& StrWyj, WyrazenieZesp WyrZ);
-LZespolona Oblicz(WyrazenieZesp  WyrZ);
+ostream& operator << (ostream& StrWyj, WyrazenieZesp & WyrZ);
+LZespolona Oblicz (WyrazenieZesp WyrZ);
 void wpiszznak(WyrazenieZesp WyrZ);
 char zwrocznak(WyrazenieZesp WyrZ);
 

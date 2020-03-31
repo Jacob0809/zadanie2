@@ -1,6 +1,8 @@
 #ifndef BAZATESTU_HH
 #define BAZATESTU_HH
-
+#include <iostream>
+#include <cmath>
+#include <unistd.h>
 
 #include "WyrazenieZesp.hh"
 

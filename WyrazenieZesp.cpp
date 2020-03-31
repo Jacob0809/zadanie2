@@ -7,22 +7,24 @@ LZespolona Oblicz (WyrazenieZesp WyrZ)
     LZespolona wynik;
     switch(WyrZ.Op){
     case Op_Dodaj:
-        return operator + (WyrZ.Arg1, WyrZ.Arg2);
+        wynik = operator + (WyrZ.Arg1, WyrZ.Arg2);
         break;
     case Op_Odejmij:
-        return operator - (WyrZ.Arg1, WyrZ.Arg2);
+        wynik =  operator - (WyrZ.Arg1, WyrZ.Arg2);
         break;
     case Op_Mnoz:
-        return operator * (WyrZ.Arg1, WyrZ.Arg2);
+        wynik =  operator * (WyrZ.Arg1, WyrZ.Arg2);
         break;
     case Op_Dziel:
-        return operator / (WyrZ.Arg1, WyrZ.Arg2); 
+        wynik =  operator / (WyrZ.Arg1, WyrZ.Arg2); 
         break;  
     case Op_modulo:
-        return operator % (WyrZ.Arg1, WyrZ.Arg2);
-        break;                        
+        wynik =  operator % (WyrZ.Arg1, WyrZ.Arg2);
+        break;    
+
     }
     return wynik;
+    
 }
 
 void wpiszznak(WyrazenieZesp WyrZ)
@@ -75,7 +77,7 @@ char zwrocznak(WyrazenieZesp WyrZ)
   return znak;
 }
 
-ostream& operator << (ostream& StrWyj, WyrazenieZesp WyrZ)
+ostream& operator << (ostream& StrWyj, WyrazenieZesp & WyrZ)
 {
   cout << WyrZ.Arg1; 
   wpiszznak(WyrZ); 

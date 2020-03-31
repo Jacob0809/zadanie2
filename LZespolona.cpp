@@ -62,7 +62,7 @@ LZespolona  operator + (LZespolona  Skl1,  LZespolona  Skl2)
 LZespolona operator - (LZespolona Skl1, LZespolona Skl2)
 {
   LZespolona wynik;
-  wynik.re = Skl1.re + Skl2.re;
+  wynik.re = Skl1.re - Skl2.re;
   wynik.im = Skl1.im - Skl2.im;
   return wynik;
 
@@ -110,7 +110,7 @@ LZespolona operator % (LZespolona Skl1, LZespolona Skl2)
   aim2= static_cast<int>(Skl2.im);
 
   wartosc1 = are1 % are2;
-  wartosc2 = aim2 % aim2;
+  wartosc2 = aim1 % aim2;
   
   wynik.re= static_cast<double> (wartosc1);
   wynik.im= static_cast<double> (wartosc2);
@@ -118,7 +118,7 @@ LZespolona operator % (LZespolona Skl1, LZespolona Skl2)
   return wynik;
 }
 
-ostream& operator << (ostream& StrWyj, LZespolona Arg)
+ostream& operator << (ostream& StrWyj, LZespolona & Arg)
 {
   StrWyj << "(" << Arg.re;
   if(Arg.im>=0)
@@ -129,15 +129,19 @@ ostream& operator << (ostream& StrWyj, LZespolona Arg)
   return StrWyj;
 }
 
-istream & operator >> (istream & StrWej, LZespolona Arg)
+istream & operator >> (istream & StrWej, LZespolona & Arg)
 {
    char tmp;
+   
+  
+  
   cin>>tmp;
   if(tmp!='(')
     {
      
      cin.clear();
      cin.ignore(1024, '\n');
+     
     }
   double re;
   double im;
@@ -156,7 +160,7 @@ istream & operator >> (istream & StrWej, LZespolona Arg)
       
       cin.clear();
       cin.ignore(1024, '\n');
-      return StrWej;
+      
     }
   cin>>tmp;
   if(tmp!=')')
@@ -164,9 +168,14 @@ istream & operator >> (istream & StrWej, LZespolona Arg)
       
       cin.clear();
       cin.ignore(1024, '\n');
-      return StrWej;
+      
+      
 
     }
+    
+    
+    
+  
 
   return StrWej;
 

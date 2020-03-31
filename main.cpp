@@ -52,19 +52,21 @@ int main(int argc, char **argv)
         cin >> Odpowiedz;
 
         wynik = Oblicz(WyrZ_PytanieTestowe);
-  }
+  
 
  if(Odpowiedz == wynik)
         {
             cout << "To jest poprawna odpowiedz!" << endl;
             dobreOdp ++;
+            iloscPyt++;
         }
         else
         {
             cout << "Blad. Poprawny wynik to " << wynik << endl;
+            iloscPyt ++;
         }
 
-        iloscPyt ++;
+  } 
         
   
 
@@ -72,7 +74,7 @@ int main(int argc, char **argv)
   cout << " Koniec testu" << endl;
   
   cout << endl;
-  cout << "Ilosc dobrych odpowiedzi" << dobreOdp << "/" << iloscPyt <<endl;
+  cout << "Ilosc dobrych odpowiedzi " << dobreOdp << "/" << iloscPyt <<endl;
   cout << endl;
 
 

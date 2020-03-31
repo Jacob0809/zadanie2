@@ -1,6 +1,9 @@
 #ifndef LZESPOLONA_HH
 #define LZESPOLONA_HH
 
+#include <iostream>
+#include <cmath>
+#include <unistd.h>
 using namespace std;
 /*!
  *  Plik zawiera definicje struktury LZesplona oraz zapowiedzi
@@ -23,7 +26,7 @@ struct  LZespolona {
  */
 
 istream & operator >> (istream & StrWej, LZespolona & Arg);
-ostream& operator << (ostream& StrWyj, LZespolona Arg);
+ostream& operator << (ostream& StrWyj, LZespolona & Arg);
 LZespolona  operator + (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator - (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator * (LZespolona  Skl1,  LZespolona  Skl2);
