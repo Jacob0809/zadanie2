@@ -3,12 +3,12 @@
 #include<cmath>
 using namespace std;
 
-void wyswietl(LZespolona arg)
+void wyswietl(LZespolona Arg)
 {
-  cout<<"("<<arg.re<<showpos<<arg.im<<"i)"<<noshowpos;
+  cout<<"("<<Arg.re<<showpos<<Arg.im<<"i)"<<noshowpos;
 }
 
-bool wczytaj(LZespolona &arg)
+bool wczytaj(LZespolona &Arg)
 {
   char tmp;
   cin>>tmp;
@@ -25,8 +25,8 @@ bool wczytaj(LZespolona &arg)
   cin>>tmp;
   if(tmp=='i')
     {
-      arg.re=re;
-      arg.im=im;
+      Arg.re=re;
+      Arg.im=im;
     }
   else
     {
@@ -118,20 +118,26 @@ LZespolona operator % (LZespolona Skl1, LZespolona Skl2)
   return wynik;
 }
 
-ostream& operator << (ostream& StrWyj, LZespolona arg)
+ostream& operator << (ostream& StrWyj, LZespolona Arg)
 {
-  StrWyj << "(" << arg.re << showpos << arg.im <<"i)" << noshowpos;
+  StrWyj << "(" << Arg.re;
+  if(Arg.im>=0)
+  {
+    cout<< '+';
+  }
+  cout << Arg.im << "i)";
   return StrWyj;
 }
 
-istream & operator >> (istream & StrWej, LZespolona arg)
+istream & operator >> (istream & StrWej, LZespolona Arg)
 {
    char tmp;
   cin>>tmp;
   if(tmp!='(')
     {
-     cin.fail;
+     
      cin.clear();
+     cin.ignore(1024, '\n');
     }
   double re;
   double im;
@@ -142,19 +148,24 @@ istream & operator >> (istream & StrWej, LZespolona arg)
   cin>>tmp;
   if(tmp=='i')
     {
-      arg.re=re;
-      arg.im=im;
+      Arg.re=re;
+      Arg.im=im;
     }
   else
     {
-      cin.fail;
+      
       cin.clear();
+      cin.ignore(1024, '\n');
+      return StrWej;
     }
   cin>>tmp;
   if(tmp!=')')
     {
-      cin.fail;
+      
       cin.clear();
+      cin.ignore(1024, '\n');
+      return StrWej;
+
     }
 
   return StrWej;
@@ -163,8 +174,14 @@ istream & operator >> (istream & StrWej, LZespolona arg)
 
 bool operator == (LZespolona Skl1, LZespolona Skl2)
 {
-    if(Skl1.re == Skl2.re && Skl1.im == Skl2.im){   
+    if(Skl1.re == Skl2.re && Skl1.im == Skl2.im)
+    {   
     return true;
     }
+    else
+    {
+      return false;
+    }
+    
                                                    
 }

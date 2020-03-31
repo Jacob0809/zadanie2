@@ -4,7 +4,7 @@
 
 #include "WyrazenieZesp.hh"
 
-
+using namespace std;
 /*
  * Modeluje pojecie baze testu z zestawem pytan w tablicy
  * oraz informacji o maksymalnej ilosci pytan, jak

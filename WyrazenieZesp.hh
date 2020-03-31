@@ -5,7 +5,7 @@
 
 #include "LZespolona.hh"
 
-
+using namespace std;
 /*!
  * Modeluje zbior operatorow arytmetycznych.
  */
@@ -29,7 +29,7 @@ struct WyrazenieZesp {
  */
  
 
-
+ostream& operator << (ostream& StrWyj, WyrazenieZesp WyrZ);
 LZespolona Oblicz(WyrazenieZesp  WyrZ);
 void wpiszznak(WyrazenieZesp WyrZ);
 char zwrocznak(WyrazenieZesp WyrZ);

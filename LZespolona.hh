@@ -1,6 +1,7 @@
 #ifndef LZESPOLONA_HH
 #define LZESPOLONA_HH
 
+using namespace std;
 /*!
  *  Plik zawiera definicje struktury LZesplona oraz zapowiedzi
  *  przeciazen operatorow arytmetycznych dzialajacych na tej 
@@ -21,19 +22,19 @@ struct  LZespolona {
  * Dalej powinny pojawic sie zapowiedzi definicji przeciazen operatorow
  */
 
-istream & operator >> (istream & str_we, LZespolona & arg);
-ostream& operator << (ostream& StrWyj, LZespolona liczba)
+istream & operator >> (istream & StrWej, LZespolona & Arg);
+ostream& operator << (ostream& StrWyj, LZespolona Arg);
 LZespolona  operator + (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator - (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator * (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator % (LZespolona  Skl1,  LZespolona  Skl2);
-void wyswietl(LZespolona arg);
-bool wczytaj(LZespolona &arg)
-bool operator == (LZesplona Skl1, LZesplona Skl2)
+void wyswietl(LZespolona Arg);
+bool wczytaj(LZespolona &Arg);
+bool operator == (LZespolona Skl1, LZespolona Skl2);
 
 
-double modul(LZespolona arg);
+double modul(LZespolona Arg);
 
 
 #endif

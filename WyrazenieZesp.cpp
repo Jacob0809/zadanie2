@@ -17,7 +17,10 @@ LZespolona Oblicz (WyrazenieZesp WyrZ)
         break;
     case Op_Dziel:
         return operator / (WyrZ.Arg1, WyrZ.Arg2); 
-        break;                    
+        break;  
+    case Op_modulo:
+        return operator % (WyrZ.Arg1, WyrZ.Arg2);
+        break;                        
     }
     return wynik;
 }
@@ -75,7 +78,7 @@ char zwrocznak(WyrazenieZesp WyrZ)
 ostream& operator << (ostream& StrWyj, WyrazenieZesp WyrZ)
 {
   cout << WyrZ.Arg1; 
-  wpiszznak(WyrZ.Op); 
+  wpiszznak(WyrZ); 
   cout << WyrZ.Arg2;
   return StrWyj;
 }
