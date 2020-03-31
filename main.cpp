@@ -51,7 +51,7 @@ int main(int argc, char **argv)
         cout << "Podaj wynik: ";
         cin >> Odpowiedz;
 
-        wynik = Oblicz (WyrZ_PytanieTestowe.Arg1, WyrZ_PytanieTestowe.Arg2, zwrocznak (WyrZ_PytanieTestowe));
+        wynik = Oblicz(WyrZ_PytanieTestowe);
   }
 
  if(Odpowiedz == wynik)

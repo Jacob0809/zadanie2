@@ -163,6 +163,8 @@ istream & operator >> (istream & StrWej, LZespolona arg)
 
 bool operator == (LZespolona Skl1, LZespolona Skl2)
 {
-    if(Skl1.re == Skl2.re && Skl1.im == Skl2.im)    return true;
-    else                                                return false;
+    if(Skl1.re == Skl2.re && Skl1.im == Skl2.im){   
+    return true;
+    }
+                                                   
 }

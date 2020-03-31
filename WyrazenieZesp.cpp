@@ -4,7 +4,7 @@ using namespace std;
 
 LZespolona Oblicz (WyrazenieZesp WyrZ)
 {
-    LZespolona wyn;
+    LZespolona wynik;
     switch(WyrZ.Op){
     case Op_Dodaj:
         return operator + (WyrZ.Arg1, WyrZ.Arg2);
@@ -19,7 +19,7 @@ LZespolona Oblicz (WyrazenieZesp WyrZ)
         return operator / (WyrZ.Arg1, WyrZ.Arg2); 
         break;                    
     }
-    return wyn;
+    return wynik;
 }
 
 void wpiszznak(WyrazenieZesp WyrZ)
@@ -74,7 +74,9 @@ char zwrocznak(WyrazenieZesp WyrZ)
 
 ostream& operator << (ostream& StrWyj, WyrazenieZesp WyrZ)
 {
-  StrWyj << WyrZ.Arg1 << noshowpos << zwrocznak(WyrZ.Op) << noshowpos << WyrZ.Arg2 << noshowpos;
+  cout << WyrZ.Arg1; 
+  wpiszznak(WyrZ.Op); 
+  cout << WyrZ.Arg2;
   return StrWyj;
 }
 
