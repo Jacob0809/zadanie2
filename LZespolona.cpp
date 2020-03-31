@@ -118,9 +118,51 @@ LZespolona operator % (LZespolona Skl1, LZespolona Skl2)
   return wynik;
 }
 
-ostream& operator << (ostream& StrWyj, LZespolona liczba)
+ostream& operator << (ostream& StrWyj, LZespolona arg)
 {
-  StrWyj << "(" << liczba.re << showpos << liczba.im <<"i)" << noshowpos;
+  StrWyj << "(" << arg.re << showpos << arg.im <<"i)" << noshowpos;
   return StrWyj;
 }
 
+istream & operator >> (istream & StrWej, LZespolona arg)
+{
+   char tmp;
+  cin>>tmp;
+  if(tmp!='(')
+    {
+     cin.fail;
+     cin.clear();
+    }
+  double re;
+  double im;
+
+
+  cin>>re;
+  cin>>im;
+  cin>>tmp;
+  if(tmp=='i')
+    {
+      arg.re=re;
+      arg.im=im;
+    }
+  else
+    {
+      cin.fail;
+      cin.clear();
+    }
+  cin>>tmp;
+  if(tmp!=')')
+    {
+      cin.fail;
+      cin.clear();
+    }
+
+  return StrWej;
+
+}
+
+bool operator == (LZespolona Skl1, LZespolona Skl2)
+{
+    if(Skl1.re == Skl2.re && Skl1.im == Skl2.im)    return true;
+    else                                                return false;
+}

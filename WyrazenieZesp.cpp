@@ -74,7 +74,7 @@ char zwrocznak(WyrazenieZesp WyrZ)
 
 ostream& operator << (ostream& StrWyj, WyrazenieZesp WyrZ)
 {
-  StrWyj << WyrZ.Arg1 << noshowpos << znak(WyrZ.Op) << noshowpos << WyrZ.Arg2 << noshowpos;
+  StrWyj << WyrZ.Arg1 << noshowpos << zwrocznak(WyrZ.Op) << noshowpos << WyrZ.Arg2 << noshowpos;
   return StrWyj;
 }
 

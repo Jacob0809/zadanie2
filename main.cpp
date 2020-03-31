@@ -1,5 +1,10 @@
 #include <iostream>
+#include <cmath>
+#include <unistd.h>
+#include "LZespolona.hh"
 #include "BazaTestu.hh"
+#include "WyrazenieZesp.hh"
+
 
 using namespace std;
   
@@ -32,17 +37,44 @@ int main(int argc, char **argv)
   cout << endl;
 
   WyrazenieZesp   WyrZ_PytanieTestowe;
+  LZespolona Odpowiedz;
+  LZespolona wynik;
+  double iloscPyt = 0;
+  double dobreOdp = 0;
   
   while (PobierzNastpnePytanie(&BazaT,&WyrZ_PytanieTestowe)) {
-    cout << " Czesc rzeczywista pierwszego argumentu: ";
-    cout << WyrZ_PytanieTestowe.Arg1.re << endl;
+   cout << endl;
+        cout << "Podaj wynik operacji: " << WyrZ_PytanieTestowe;
+
+
+        cout << endl;
+        cout << "Podaj wynik: ";
+        cin >> Odpowiedz;
+
+        wynik = Oblicz (WyrZ_PytanieTestowe.Arg1, WyrZ_PytanieTestowe.Arg2, zwrocznak (WyrZ_PytanieTestowe));
   }
 
+ if(Odpowiedz == wynik)
+        {
+            cout << "To jest poprawna odpowiedz!" << endl;
+            dobreOdp ++;
+        }
+        else
+        {
+            cout << "Blad. Poprawny wynik to " << wynik << endl;
+        }
+
+        iloscPyt ++;
+        
   
 
   cout << endl;
   cout << " Koniec testu" << endl;
+  
   cout << endl;
+  cout << "Ilosc dobrych odpowiedzi" << dobreOdp << "/" << iloscPyt <<endl;
+  cout << endl;
+
 
 
 

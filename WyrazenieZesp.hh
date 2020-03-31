@@ -9,7 +9,7 @@
 /*!
  * Modeluje zbior operatorow arytmetycznych.
  */
-enum Operator { Op_Dodaj, Op_Odejmij, Op_Mnoz, Op_Dziel };
+enum Operator { Op_Dodaj, Op_Odejmij, Op_Mnoz, Op_Dziel, Op_modulo };
 
 
 
@@ -29,10 +29,9 @@ struct WyrazenieZesp {
  */
  
 
-/*
-void Wyswietl(WyrazenieZesp  WyrZ);
+
 LZespolona Oblicz(WyrazenieZesp  WyrZ);
-string Znak(Operator operatort)
-*/
+void wpiszznak(WyrazenieZesp WyrZ);
+char zwrocznak(WyrazenieZesp WyrZ);
 
 #endif
