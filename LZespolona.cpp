@@ -99,10 +99,28 @@ LZespolona operator / (LZespolona Skl1, LZespolona Skl2)
   return wynik;
 }
 
+LZespolona operator % (LZespolona Skl1, LZespolona Skl2)
+{
+  LZespolona wynik;
+  int are1, aim1, are2, aim2;
+  int wartosc1, wartosc2;
+  are1= static_cast<int>(Skl1.re);
+  are2= static_cast<int>(Skl2.re); 
+  aim1= static_cast<int>(Skl1.im); 
+  aim2= static_cast<int>(Skl2.im);
+
+  wartosc1 = are1 % are2;
+  wartosc2 = aim2 % aim2;
+  
+  wynik.re= static_cast<double> (wartosc1);
+  wynik.im= static_cast<double> (wartosc2);
+
+  return wynik;
+}
+
 ostream& operator << (ostream& StrWyj, LZespolona liczba)
 {
   StrWyj << "(" << liczba.re << showpos << liczba.im <<"i)" << noshowpos;
   return StrWyj;
 }
 
-  
